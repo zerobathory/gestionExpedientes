@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpDocumentor
+    configVersion="3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://www.phpdoc.org"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/phpDocumentor/phpDocumentor/master/data/xsd/phpdoc.xsd"
+>
+  <title>Documentación</title>
+  <paths>
+      <output>docs/web</output>
+      <cache>docs/build/cache</cache>
+  </paths>
+  <version number="1.0.0">
+      <api format="php">
+          <source dsn=".">
+              <path>app/Events</path>
+              <path>app/Http/Controllers</path>
+              <!-- <path>app/Http/Listeners</path> -->
+              <path>app/Mail</path> 
+              <path>app/Models</path>
+              <path>database/seeders</path>
+              <path>routes</path>
+              <path>resources/views/emails</path>
+          </source>
+          <extensions>
+						<extension>php</extension>
+						</extensions>
+          <include-source>true</include-source>
+          <!-- <default-package-name>MyPackage</default-package-name> -->
+          <!-- <ignore-tags name="packages">
+          </ignore-tags> -->
+          <!--  <ignore hidden="true" symlinks="true">
+              <path>packages/Application.html</path>
+          </ignore> -->
+      </api>
+  </version>
+  
+ <!--  <template>
+    <menu>
+      <item label="Aplicación" href="app.html"/>
+      <item label="Eventos" href="app-events.html"/>
+      <item label="Modelos" href="app-models.html"/>
+      <item label="Controladores" href="app-http-controllers.html"/>
+    </menu>
+  </template> -->
+  <setting name="template.color" value="blue"/>
+	<!-- <settings>
+		 <short-class>true</short-class>
+	</settings> -->
+</phpDocumentor>
+
+
+<!-- <structure>
+    <menu>
+        <item label="Home">
+            <uri href="index.html" />
+        </item>
+         <item label="Aplicación">
+            <uri href="app.html" />
+        </item>
+   </menu>
+</structure> -->

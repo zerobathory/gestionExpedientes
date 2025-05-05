@@ -77,12 +77,13 @@
         </div>
     </div>
 </div>
+
 <script>
   jQuery(document).ready( function($) {
     
     $('#table').DataTable({
     "aoColumnDefs": [
-      { 'bSortable': false, 'aTargets': [ 0,1,4,5,6 ] }
+      { 'bSortable': false, 'aTargets': @role('usuario') [ 0,1,4,5 ] @endrole @role('administrador') [ 0,1,4,5,6 ] @endrole }
     ],
     "language":{
       "decimal":        "",
