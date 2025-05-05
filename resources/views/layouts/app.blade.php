@@ -17,6 +17,16 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
     @stack('styles')
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .fill-height {
+            min-height: 100%;
+            height:auto !important; /* cross-browser */
+            height: 100%; /* cross-browser */
+        }
+    </style>
 </head>
 <body>
     <div id="app">
