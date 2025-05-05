@@ -19,7 +19,7 @@ class ExpedientesFactory extends Factory
     public function definition(): array
     {
         return [
-            'numero_expediente' => fake()->unique()->numerify('F-#######'),
+            'numero_expediente' => fake()->unique()->numerify('#####'),
             'asunto' => fake()->words(3, true),
             'fecha_inicio' => fake()->dateTime(),
             'id_estatus' => EstatusExpedientes::all()->random()->idestatus_expedientes,

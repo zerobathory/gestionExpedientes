@@ -5,27 +5,27 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Crear nuevo expediente') }}</div>
+                <div class="card-header">{{ __('Editando expdiente:') }} <strong>{{$expediente->numero_expediente}}</strong></div>
                     <div class="container py-5">
                         <div class="col-12">
-                              <form>
-                  
+                              <form method="POST" action="{{route('expedientes.update', $expediente->idexpedientes)}}">
+                                @csrf
+                                @method('PUT')
                                 <div class="row">
                                   <div class="col-md-6 mb-4">
                   
                                     <div data-mdb-input-init class="form-outline">
-                                      <input type="text" id="firstName" class="form-control form-control-lg" />
+                                      <input type="text" value="{{$expediente->asunto}}" name="asunto" class="form-control form-control-lg" />
                                       <label class="form-label" for="firstName">Asunto</label>
                                     </div>
                   
                                   </div>
                                   <div class="col-md-6 mb-4">
                   
-                                    <select class="select form-control-lg">
-                                      <option value="1"></option>
-                                      <option value="2">Abierto</option>
-                                      <option value="3">En proceso</option>
-                                      <option value="4">Concluído</option>
+                                    <select class="select form-control-lg" name="estatus">
+                                      <option value="1" @if($expediente->id_estatus == 1) selected @endif>Abierto</option>
+                                      <option value="2" @if($expediente->id_estatus == 2) selected @endif>En proceso</option>
+                                      <option value="3" @if($expediente->id_estatus == 3) selected @endif>Concluído</option>
                                     </select>
                                     <label class="form-label select-label">Estatus expediente</label>
                   

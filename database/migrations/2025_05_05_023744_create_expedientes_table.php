@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('expedientes', function (Blueprint $table) {
             $table->id('idexpedientes');
-            $table->string('numero_expediente')->unique();
+            $table->integer('numero_expediente')->unique();
             $table->string('asunto');
             $table->dateTime('fecha_inicio');
             $table->unsignedBigInteger('id_estatus');

@@ -29,12 +29,11 @@ class RoleSeeder extends Seeder
 		Permission::create(['name' => 'users.delete'])->syncRoles([$administrador]);
 
 		Permission::create(['name' => 'expedientes.create'])->syncRoles([$administrador, $usuario]);
-		Permission::create(['name' => 'expedientes.read'])->syncRoles([$administrador, $usuario]);
+		Permission::create(['name' => 'expedientes.read'])->syncRoles([$usuario]);
 		Permission::create(['name' => 'expedientes.readAll'])->syncRoles([$administrador]);
 		Permission::create(['name' => 'expedientes.update'])->syncRoles([$administrador, $usuario]);
 		Permission::create(['name' => 'expedientes.delete'])->syncRoles([$administrador]);
-		Permission::create(['name' => 'expedientes.softDelete'])->syncRoles([$administrador]);
-		Permission::create(['name' => 'expedientes.forceDelete'])->syncRoles([$administrador]);
+		Permission::create(['name' => 'expedientes.restore'])->syncRoles([$administrador]);
 
 		$administradorUser= User::create([
 			'nombre' => fake()->firstName(),
