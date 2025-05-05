@@ -5,17 +5,17 @@
 ## Instrucciones para descarga e instalación del respositorio
 
 
-- Abrir la terminal de comandos de su preferencia y escribir y...
-- Descargar el repositorio completo con "git clone https://github.com/zerobathory/gestionExpedientes.git"
-- Dirigirse a la carpeta descargada con "cd gestionExpedientes"
-- Instalar las dependencias de PHP con "composer install"
-- Instalar las dependencias de node con "npm install".
-- Compilar los assets de node/bootstrap con "npm run build".
-- copiar el archivo .env.example y renombrarlo como .env se sugiere usar el comando "cp .env.example .env"
-- Generar la clave de la aplicación de laravel con "php artisan key:generate"
+- Abrir la terminal de comandos de su preferencia ...
+- Descargar el repositorio completo con ```git clone https://github.com/zerobathory/gestionExpedientes.git```
+- Dirigirse a la carpeta descargada con ```cd gestionExpedientes```
+- Instalar las dependencias de PHP con ```composer install```
+- Instalar las dependencias de node con ```npm install```.
+- Compilar los assets de node/bootstrap con ```npm run build```.
+- copiar el archivo .env.example y renombrarlo como .env se sugiere usar el comando ```cp .env.example .env```
+- Generar la clave de la aplicación de laravel con ```php artisan key:generate```
 - Editar el archivo .env en la parte de DB_CONNECTION y configurar los datos de la BD de PostgreSQL(servidor, nombre de base de datos, usuario y contraseña)
 - Inciar servidor de php(Apache) y de PostgreSQL de su preferencia
-- Para generar las migraciones hay dos opciones, en caso que quieran la información de relleno con faker, usar el comando "php artisan migrate --seed"... En caso de solo querer generar las tablas vacías para llenar los datos desde 0, ejecutar el comando "php artisan migrate" y posteriormente ejecutar el comando "php artisan db:seed --class RoleSeeder" con la finalidad de solo ejecutar el seeder de los roles de usuario y también se cargue en la Bd el usuario administrador y básico
+- Para generar las migraciones hay dos opciones, en caso que quieran la información de relleno con faker, usar el comando ```php artisan migrate --seed```......En caso de solo querer generar las tablas vacías para llenar los datos desde 0, ejecutar el comando ```php artisan migrate``` y posteriormente ejecutar el comando ```php artisan db:seed --class RoleSeeder``` con la finalidad de solo ejecutar el seeder de los roles de usuario y también se cargue en la Bd el usuario administrador y básico
 
 Usuario con rol de administrador:
 <p>Correo: <strong>administrador@test.com</strong></p>
