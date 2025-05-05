@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Expedientes extends Model
 {
@@ -20,11 +21,11 @@ class Expedientes extends Model
         'id_usuario_registra'
     ];
 
-    public function usuarioRegistra(): BelongsTo
+    public function usuarioRegistra(): HasOne
 
     {
 
-        return $this->belongsTo(User::class,'id','id_usuario_registra');
+        return $this->hasOne(User::class,'id','id_usuario_registra');
 
     }
 
